@@ -4,12 +4,7 @@ import { TbSearch } from "react-icons/tb";
 export const Hero = () => {
   return (
     <>
-      <div className="bg-[--primary] text-white h-full rounded-[4rem] relative w-full grid grid-cols-5 p-10 overflow-hidden">
-        <img
-          src={img2}
-          alt="image"
-          className="h-[99dvh] w-auto col-start-1 col-end-3 p-4 row-start-2 absolute scale-x-[-1]  -left-[10rem] rounded-b-3xl"
-        />
+      <div className="bg-[--primary] text-white h-full rounded-[4rem] relative w-full lg:grid  flex flex-col lg:grid-cols-5 p-10 ">
         <div className="flex gap-2 col-start-4 h-[5.5rem] rounded-full -mt-[4rem] -mr-[5rem] py-2 relative ">
           <div className="relative bg-[--secondary] h-fit flex rounded-full gap-4 px-4 items-center simple-curve border-[15.8px] border-white w-[20rem] justify-between z-20 after:absolute after:contents-[''] after:bg-white after:h-[5rem] after:w-[6rem] after:-end-[6rem] after:rounded-full after:-top-8 ">
             <button
@@ -26,10 +21,15 @@ export const Hero = () => {
             <div className="rounded-full bg-[--primary] h-[8rem] w-[9.1rem] mt-[1.59rem] -right-[1.9rem] z-20 absolute" />
           </div>
         </div>
+        <img
+          src={img2}
+          alt="image"
+          className="h-[99dvh] lg:col-start-1 lg:col-end-3 p-4 lg:row-start-2 lg:absolute scale-x-[-1]  -left-[10rem] rounded-b-3xl object-cover col-auto"
+        />
         {/* content */}
         <div></div>
-        <div className="col-start-3 col-span-6 row-start-3 row-end-12 text-end -mt-10 z-20 relative ">
-          <p className="text-[7rem] font-black uppercase text-balance leading-[8rem] p-5 ">
+        <div className="lg:col-start-3 lg:col-span-6 lg:row-start-3 lg:row-end-12 text-end lg:-mt-10 z-20 relative ">
+          <p className="lg:text-[7rem] text-2xl font-black uppercase text-balance lg:leading-[8rem] p-5 ">
             Hit <span className="[font-stretch]">H</span>ard
             <br />
             Wi<span>N</span> Big
@@ -56,9 +56,12 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      {/* fix */}
-      {/* <div className="absolute h-20 w-20 bg-red-900 end-4 bottom-[14rem] rounded-full z-20" /> */}
-      {/* // <div /> */}
+
+      <div
+        className=" absolute h-20 w-[5.5rem] bg-white left-[614px] inset-[39rem] rounded-full 
+        before:h-20 before:w-[5.8rem] before:bg-[--primary] before:contents-[''] before:absolute before:right-[3.5rem] before:bottom-[0.7rem] before:rounded-br-3xl
+      "
+      />
     </>
   );
 };

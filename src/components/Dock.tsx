@@ -2,7 +2,7 @@ import { RiHome6Line } from "react-icons/ri";
 import { AiOutlineShop } from "react-icons/ai";
 import { FaShoppingBag, FaHeart, FaUser } from "react-icons/fa";
 import { useState } from "react";
-import img from "../assets/image/6.png"
+import img from "../assets/image/6.png";
 export const FloatingNav = () => {
   const [active, setActive] = useState(0);
   const menu = [
@@ -31,13 +31,13 @@ export const FloatingNav = () => {
   return (
     <>
       <section className="flex flex-col gap-3">
-        <div className="flex justify-around flex-col border rounded-full py-4 px-4 items-center gap-8 bg-[--secondary] ">
+        <div className="flex justify-around lg:flex-col flex-row border rounded-full py-4 px-4 items-center gap-8 bg-[--secondary] ">
           <div className="p-3">
             <div className=" rounded-full bg-[--primary] h-[3rem] w-[3rem]" />
           </div>
           <div>
             {" "}
-            <nav className="flex flex-col gap-8">
+            <nav className="flex lg:flex-col flex-row gap-8">
               {menu.map((val, index) => (
                 <div
                   key={index}
@@ -59,20 +59,18 @@ export const FloatingNav = () => {
           </div>
           <div className="">
             <FaUser className=" rounded-full bg-[--primary]  h-[3rem] w-[3rem] text-[--secondary]" />
-            
           </div>
         </div>
-       
-          <div className=" text-white rounded-full bg-[--primary] flex flex-col justify-evenly items-center gap-4 py-[2rem] text-sm uppercase ">
-            <div className="text-xs">New Arrival</div>
-            <div className="p-3">
-              <img src={img} alt="img" className="w-20 h-20"/>
-            </div>
-            <button className=" bg-[--secondary] text-white p-3 rounded-full">
-              Order Now
-            </button>
+
+        <div className=" text-white rounded-full bg-[--primary] flex lg:flex-col flex-row justify-evenly items-center gap-4 py-[2rem] text-sm uppercase ">
+          <div className="text-xs">New Arrival</div>
+          <div className="p-3">
+            <img src={img} alt="img" className="w-20 h-20" />
           </div>
-       
+          <button className="text-xs bg-[--secondary] text-white p-3 rounded-full">
+            Order Now
+          </button>
+        </div>
       </section>
     </>
   );
