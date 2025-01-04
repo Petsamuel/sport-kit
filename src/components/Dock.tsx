@@ -1,7 +1,8 @@
 import { RiHome6Line } from "react-icons/ri";
 import { AiOutlineShop } from "react-icons/ai";
-import { FaShoppingBag, FaHeart } from "react-icons/fa";
+import { FaShoppingBag, FaHeart, FaUser } from "react-icons/fa";
 import { useState } from "react";
+import img from "../assets/image/6.png"
 export const FloatingNav = () => {
   const [active, setActive] = useState(0);
   const menu = [
@@ -32,7 +33,7 @@ export const FloatingNav = () => {
       <section className="flex flex-col gap-3">
         <div className="flex justify-around flex-col border rounded-full py-4 px-4 items-center gap-8 bg-[--secondary] ">
           <div className="p-3">
-            <div className=" rounded-full bg-[--primary] h-[4rem] w-[4rem]" />
+            <div className=" rounded-full bg-[--primary] h-[3rem] w-[3rem]" />
           </div>
           <div>
             {" "}
@@ -57,15 +58,21 @@ export const FloatingNav = () => {
             </nav>
           </div>
           <div className="">
-            <div className=" rounded-full bg-[--primary]  h-[4rem] w-[4rem] " />
+            <FaUser className=" rounded-full bg-[--primary]  h-[3rem] w-[3rem] text-[--secondary]" />
+            
           </div>
         </div>
-        <div>
-          <div className="rounded-full bg-[--primary] flex flex-col justify-center items-center gap-4 py-[3.5rem]">
-            <div>dfdfdf</div>
-            <div>wewewewe</div>
+       
+          <div className=" text-white rounded-full bg-[--primary] flex flex-col justify-evenly items-center gap-4 py-[2rem] text-sm uppercase ">
+            <div className="text-xs">New Arrival</div>
+            <div className="p-3">
+              <img src={img} alt="img" className="w-20 h-20"/>
+            </div>
+            <button className=" bg-[--secondary] text-white p-3 rounded-full">
+              Order Now
+            </button>
           </div>
-        </div>
+       
       </section>
     </>
   );
